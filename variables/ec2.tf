@@ -1,7 +1,7 @@
 resource "aws_instance" "Linux-VM" {
-  ami                    = var.ami_id
+  ami           = var.ami_id
   vpc_security_group_ids = [aws_security_group.Allow-All.id]
-  instance_type          = var.instance_type
+  instance_type = var.instance_type
 
   tags = var.ec2-tags
 }

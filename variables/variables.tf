@@ -4,7 +4,7 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-  type    = string
+  type = string
   #default = "t3.micro"
 }
 
@@ -43,7 +43,7 @@ variable "protocol" {
 }
 
 variable "cidr_blcoks" {
-  type    = list(string)
+  type = list(string)
   default = ["0.0.0.0/0"]
 
 }

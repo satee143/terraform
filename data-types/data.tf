@@ -17,7 +17,7 @@ data "aws_ami" "ami_id" {
   }
 }
 
-data "aws_vpc" "defaultvpc"{
+data "aws_vpc" "defaultvpc" {
   default = true
 }
 

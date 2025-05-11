@@ -21,7 +21,7 @@ resource "aws_security_group" "AllowAll" {
 }
 
 resource "aws_instance" "MyFirstVM" {
-  ami = data.aws_ami.ami_id.id
+  ami           = data.aws_ami.ami_id.id
   vpc_security_group_ids = [aws_security_group.AllowAll.id]
   instance_type = "t3.micro"
   tags = {

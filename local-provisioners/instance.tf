@@ -1,8 +1,8 @@
 resource "aws_vpc" "my_vpc" {
   cidr_block           = "172.16.0.0/16"
   enable_dns_hostnames = true
-  instance_tenancy = "default"
-  enable_dns_support = "true"
+  instance_tenancy     = "default"
+  enable_dns_support   = "true"
 
   tags = {
     Name = "my vpc"

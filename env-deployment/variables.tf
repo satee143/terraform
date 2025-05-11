@@ -5,7 +5,7 @@ variable "project" {
 variable "environment" {}
 
 variable "servers" {
-  default = ["frontend","backend","SQL"]
+  default = ["frontend", "backend", "SQL"]
 }
 
 variable "ami" {

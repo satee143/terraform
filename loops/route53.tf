@@ -4,7 +4,7 @@ resource "aws_route53_record" "route53private" {
   type            = "A"
   zone_id         = "Z04730311DPFG7PGUF4PF"
   ttl             = 1
-  records         = [aws_instance.ExpenseVM[count.index].private_ip]
+  records = [aws_instance.ExpenseVM[count.index].private_ip]
   allow_overwrite = true
 }
 
@@ -13,6 +13,6 @@ resource "aws_route53_record" "route53public" {
   type            = "A"
   zone_id         = "Z04730311DPFG7PGUF4PF"
   ttl             = 1
-  records         = [aws_instance.ExpenseVM[1].public_ip]
+  records = [aws_instance.ExpenseVM[1].public_ip]
   allow_overwrite = true
 }

@@ -6,10 +6,11 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "myredbucket2222"
-    key            = "state-info"
-    region         = "us-east-2"
-    dynamodb_table = "myredbucket222"
+    bucket       = "myterraformbucketdev"
+    key          = "state-dev"
+    region       = "us-east-2"
+    use_lockfile = true
+
   }
 }
 

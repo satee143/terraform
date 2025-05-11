@@ -21,7 +21,7 @@ resource "aws_security_group" "AllowAll" {
 }
 
 resource "aws_instance" "MyFirstVM" {
-  ami = local.ami_id
+  ami           = local.ami_id
   vpc_security_group_ids = [aws_security_group.AllowAll.id]
   instance_type = local.instance_type
   tags = {

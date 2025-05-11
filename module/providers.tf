@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "myredbucket2222"
-    key            = "state-info"
+    key            = "state-info-module"
     region         = "us-east-2"
     dynamodb_table = "myredbucket222"
   }
