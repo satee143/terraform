@@ -21,5 +21,11 @@ resource "aws_internet_gateway" "igw" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id = aws_vpc.mainvpc.id
+  count = length(var.public_subnet_cidrs)
+  vpc_id            = aws_vpc.mainvpc.id
+  cidr_block        = var.public_subnet_cidrs[count.index]
+  availability_zone = var.availability_zones[count.index]
+  tags = merge(var.common_tags, var.public_subnet_tags,
+    { Name = local.resource_name })
+
 }
